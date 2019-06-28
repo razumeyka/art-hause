@@ -1,0 +1,171 @@
+header {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	padding-top: 10px;
+}
+
+.header__content {
+	justify-content: space-around;
+}
+
+.languages {
+	justify-content: center;
+	margin-bottom: 10px;
+}
+
+.languages__item {
+	font: 400 20px "Arsenal";
+	color: rgb(255, 255, 255);
+	padding: 0 10px;
+	cursor: pointer;
+}
+
+.languages__item_active {
+	font-weight: 700;
+	color: rgb(223, 188, 150);
+	
+}
+
+.logo {
+    display: block;
+    background: url(../../images/logo.png) no-repeat center;
+    background-size: contain;
+    width: 280px;
+    height: 110px;
+}
+
+.menu {
+	display: none;
+    margin: 0;
+    padding: 0;
+	height: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0;
+	width: 100%;
+	background: url(../../images/bg_menu.jpg) no-repeat center;
+	background-size: cover;
+	z-index: 2;
+	min-width: 360px;
+}
+
+.menu:before {
+	content: "";
+	background: rgba(255,255,255,0.8);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.menu li {
+    list-style: none;
+    position: relative;
+}
+
+.menu>li {
+	width: 50%;
+}
+
+.menu li a {
+    display: inline-block;
+	font: 700 26px "Arsenal";
+	color: rgb(43, 42, 41);
+    text-decoration: none;
+    padding: 10px 0;  
+}
+
+.sub-menu {
+	padding-left: 20px;
+}
+
+.sub-menu li a {
+    display: inline-block;
+	font: 400 17px "Circe";
+	color: rgb(163, 139, 116);
+    text-decoration: none;
+    padding: 5px 0;  
+}
+
+/*burger*/
+
+.burger {
+    width: 40px;
+    height: 42px;
+	cursor: pointer;
+	position: relative;
+}
+
+.burger span, .burger span::before, .burger span::after {
+    display: block;
+    cursor: pointer; 
+    height: 3px;
+    width: 30px;
+    background: #ffffff;
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    transition: all .2s ease-in-out;
+}
+
+.burger span::before {
+    content: '';
+    left: 0;
+}
+
+.burger span::after {
+    content: '';
+    left: 0;
+    top: 20px;
+}
+
+.burger_active span {
+    background-color: transparent;
+}
+    
+ .burger_active span::before  {
+    transform: rotate(45deg);
+    top: 10px;
+}
+
+ .burger_active span::after  {
+    transform: rotate(-45deg);
+    top: 10px;
+} 
+
+.contacts__contact {
+	display: block;
+	font: 400 18px "Arsenal";
+	color: rgb(255, 255, 255);
+	text-align: right;
+	text-decoration: none;
+}
+
+.contacts__call-order {
+	margin-top: 10px;
+}
+
+
+/*media*/ 
+
+@media screen and (max-width: 1279px) {
+	
+}
+
+@media screen and (max-width: 1023px) {
+	
+
+}
+
+@media screen and (max-width: 767px) {
+    
+}
+
+@media screen and (max-width: 639px) {
+	
+}

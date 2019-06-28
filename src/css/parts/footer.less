@@ -1,0 +1,179 @@
+/* footer */
+
+.footer__top-line {
+	background: url(../../images/bg_footer.jpg) no-repeat center;
+	background-size: cover;
+	padding: 100px 0;
+	position: relative;
+}
+
+.footer__top-line:before {
+	content: "";
+	background: rgba(0,0,0,0.6);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.footer__top-line .wrapper {
+	position: relative;
+	
+}
+
+.footer__caption {
+	font: 700 43px "Arsenal";
+	color: rgb(255, 255, 255);
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.footer__contacts {
+	width: 50%;
+    box-sizing: border-box;
+    padding: 0 50px;
+}
+
+.footer__contact-item {
+	margin-bottom: 20px;
+}
+
+.footer__contact-name {
+	font: 400 26px "Circe";
+	color: rgb(217, 197, 176);
+	text-align: center;
+}
+
+.footer__contact {
+	display: block;
+	font: 700 23px "Arsenal";
+	color: rgb(255, 255, 255);
+	text-align: center;
+	text-decoration: none;
+}
+	
+.footer__contact_large {
+	font-size: 34px;
+}
+
+.footer__form {
+	width: 50%;
+    box-sizing: border-box;
+    padding: 0 50px;
+}
+
+.form__caption {
+	font: 400 26px "Circe";
+	color: rgb(255, 255, 255);
+	text-align: center;
+}
+
+footer .form .wpcf7-form-control-wrap {
+    display: block;
+    margin: 15px 0;
+}
+
+footer .form .wpcf7-form-control-wrap .wpcf7-form-control {
+	background: transparent;
+    display: block;
+    box-sizing: border-box;
+    border: 2px solid rgb(255, 255, 255);
+	border-radius: 10px;
+    height: 59px;
+    width: 100%;
+	max-width: 482px;
+	font: 400 18px "Circe";
+	color: rgb(217, 197, 176);
+    outline: none;
+    padding: 10px 20px;
+}
+
+footer .form input:not([type=submit]):focus {
+	border: 2px solid #c1ad99;
+}
+
+footer .form .button {
+    width: 100%;
+}
+
+.footer__bottom-line {
+	padding: 15px 0;
+}
+
+.footer__bottom-line .wrapper {
+	align-items: center;
+}
+
+.footer__copyright {
+	font: 400 18px "Circe";
+	color: rgb(54, 54, 54);
+}
+
+.footer__logo {
+	background: url(../../images/logo-small.png) no-repeat center;
+	background-size: contain;
+	width: 150px;
+	height: 65px;
+}
+
+.social__icon {
+	display: block;
+	background: #efab1a;
+	width: 36px;
+	height: 36px;
+	margin-left: 10px;
+}
+
+.social__icon_vk {
+	background-position: ;
+}
+
+.social__icon_insta {
+	background-position: ;
+}
+
+
+/*media*/ 
+
+@media screen and (min-width: 1921px) {
+    
+}
+
+@media screen and (max-width: 1279px) {
+    
+}
+
+@media screen and (max-width: 1023px) {
+	
+}
+
+@media screen and (max-width: 767px) {
+	.footer__content {
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	.footer__contacts {
+		width: 100%;
+	}
+	
+	.footer__form {
+		width: 100%;
+	}
+	
+	.footer__logo {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 639px) {
+	.footer__copyright {
+		display: none;
+	}
+	
+	.footer__bottom-line .wrapper {
+		justify-content: center;
+	}
+}
+
