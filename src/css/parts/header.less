@@ -4,22 +4,24 @@ header {
 	top: 0;
 	left: 0;
 	z-index: 100;
-	padding-top: 10px;
+	padding-top: 40px;
 }
 
 .header__content {
-	justify-content: space-around;
+	max-width:1800px;
+    padding:0 40px;
+    margin:0 auto;
 }
 
 .languages {
 	justify-content: center;
-	margin-bottom: 10px;
+	margin-bottom: 43px;
 }
 
 .languages__item {
 	font: 400 20px "Arsenal";
 	color: rgb(255, 255, 255);
-	padding: 0 10px;
+	padding: 0 13px;
 	cursor: pointer;
 }
 
@@ -33,8 +35,8 @@ header {
     display: block;
     background: url(../../images/logo.png) no-repeat center;
     background-size: contain;
-    width: 280px;
-    height: 110px;
+    width: 242px;
+    height: 103px;
 }
 
 .menu {
@@ -104,7 +106,7 @@ header {
 .burger span, .burger span::before, .burger span::after {
     display: block;
     cursor: pointer; 
-    height: 3px;
+    height: 2px;
     width: 30px;
     background: #ffffff;
     position: absolute;
@@ -116,6 +118,7 @@ header {
 .burger span::before {
     content: '';
     left: 0;
+	width: 23px;
 }
 
 .burger span::after {
@@ -138,18 +141,18 @@ header {
     top: 10px;
 } 
 
-.contacts__contact {
+.header__contact {
 	display: block;
-	font: 400 18px "Arsenal";
+	font: 400 22px "Arsenal";
 	color: rgb(255, 255, 255);
 	text-align: right;
 	text-decoration: none;
 }
 
-.contacts__call-order {
-	margin-top: 10px;
+.header__contact_mail {
+	font-weight: 18px;
+	margin: 6px 0 38px;
 }
-
 
 /*media*/ 
 
