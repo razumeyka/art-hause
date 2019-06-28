@@ -8,14 +8,8 @@ $(document).ready(function(){
 // mobile_menu
     
     $('.burger').click( function() { 
-        $('header .menu').slideToggle(300).css('z-index','3'); 
+        $('.menu-screen').slideToggle(300); 
         $('.burger').toggleClass( 'burger_active' ); 
-		if($('.catalog-list').is(':visible')) {
-			$('.catalog-list').hide();
-		}
-		if($('.search').is(':visible')) {
-			$('.search').hide();
-		}
     });
 	
 // languages

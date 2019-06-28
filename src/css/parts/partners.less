@@ -1,6 +1,19 @@
-.partners__partner-wr {
+.partners__item {
 	background-color: #ece8e3;
 	width: 25%;
+	padding-top: 25%;
+	position: relative;
+}
+
+.partners__partner-wr  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+	flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .partners__partner-wr_colored {
@@ -9,51 +22,105 @@
 
 .partners__partner {
 	background: url(../../images/sprites-logo.png) no-repeat -663px -50px;
-	margin: auto;
+	transform: translate(0, 0);
+}
+
+.partners__partner_basf {
+	background-position: -401px -67px;
 	width: 244px;
 	height: 122px;
 }
 
 .partners__partner_wood{	
-	background-position: -50px -50px;
+	background-position: -49px -51px;
 	width: 235px;
 	height: 230px;
 }
 
-.partners__teknos_teknos{
-	background-position: -50px -782px;
-	width: 280px;
-	height: 74px;
+.partners__teknos_teknos {
+    background-position: -457px -738px;
+    width: 280px;
+    height: 74px;
 }
 
-.partners__teknos_fordaq{
-	background-position: -58px -386px;
-	width: 300px;
-	height: 97px;
+.partners__teknos_fordaq {
+    background-position: -53px -726px;
+    width: 300px;
+    height: 97px;
 }
 
-.partners__partner_sberbank{
-	background-position: -385px -50px;
-	width: 213px;
-	height: 188px;
+.partners__partner_sberbank {
+    background-position: -57px -402px;
+    width: 215px;
+    height: 200px;
 }
 
 .partners__partner_vtb{
-	background-position: -437px -587px;
+	background-position: -1069px -74px;
 	width: 262px;
 	height: 93px;
 }
 
-.partners__partner_muhlbock{
-	background-position: -698px -272px;
-	width: 221px;
-	height: 106px;
+.partners__partner_muhlbock {
+    background-position: -1060px -579px;
+    width: 221px;
+    height: 106px;
 }
 
-.partners__partner_akzonobel{
-	background-position: -50px -598px;
-	width: 287px;
-	height: 84px;
+.partners__partner_akzonobel {
+    background-position: -47px -940px;
+    width: 287px;
+    height: 84px;
+}
+
+.partners__partner-wr:hover .partners__partner {
+	background: url(../../images/sprites-logo-colored.png) no-repeat;
+	transition: all 0.3s linear;
+	transform: translate(0, -15px);
+}
+
+.partners__partner-wr:hover .partners__partner_basf  {
+	background-position: -401px -67px;
+}
+
+.partners__partner-wr:hover .partners__partner_wood {	
+	background-position: -49px -51px;
+}
+
+.partners__partner-wr:hover .partners__teknos_teknos  {
+    background-position: -457px -738px;
+}
+
+.partners__partner-wr:hover .partners__teknos_fordaq  {
+    background-position: -53px -726px;
+}
+
+.partners__partner-wr:hover .partners__partner_sberbank  {
+    background-position: -57px -402px;
+}
+
+.partners__partner-wr:hover .partners__partner_vtb {
+	background-position: -1069px -74px;
+}
+
+.partners__partner-wr:hover .partners__partner_muhlbock  {
+    background-position: -1060px -579px;
+}
+
+.partners__partner-wr:hover .partners__partner_akzonobel  {
+    background-position: -47px -940px;
+}
+
+.partners__description {
+	display: none;
+	font: 400 20px "Circe";
+	color: rgb(54, 54, 54);
+	text-align: center;
+	max-width: 300px;
+}
+
+.partners__partner-wr:hover .partners__description  {
+	display: block;
 }
 
 /*media*/ 

@@ -3,7 +3,7 @@ header {
 	position: absolute;
 	top: 0;
 	left: 0;
-	z-index: 100;
+	z-index: 1;
 	padding-top: 40px;
 }
 
@@ -11,6 +11,14 @@ header {
 	max-width:1800px;
     padding:0 40px;
     margin:0 auto;
+}
+
+.header__center-block {
+	position: absolute;
+	top: 40px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
 }
 
 .languages {
@@ -27,8 +35,7 @@ header {
 
 .languages__item_active {
 	font-weight: 700;
-	color: rgb(223, 188, 150);
-	
+	color: rgb(223, 188, 150);	
 }
 
 .logo {
@@ -37,32 +44,50 @@ header {
     background-size: contain;
     width: 242px;
     height: 103px;
+	margin: 0 auto;
 }
 
-.menu {
+.logo-menu {
+    display: block;
+    background: url(../../images/logo-menu.png) no-repeat center;
+    background-size: contain;
+    width: 406px;
+    height: 157px;
+	position: relative;
+}
+
+.menu-screen {
 	display: none;
-    margin: 0;
-    padding: 0;
-	height: auto;
+	background: url(../../images/bg_menu.jpg) no-repeat center;
+	background-size: cover;
 	position: absolute;
 	top: 0;
 	left: 0;
-	margin: 0;
 	width: 100%;
-	background: url(../../images/bg_menu.jpg) no-repeat center;
-	background-size: cover;
+	height: 100%;
 	z-index: 2;
-	min-width: 360px;
 }
 
-.menu:before {
-	content: "";
+.menu-screen__background {
 	background: rgba(255,255,255,0.8);
 	width: 100%;
 	height: 100%;
 	position: absolute;
 	top: 0;
 	left: 0;
+}
+
+.menu-screen__content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.menu {
+    margin: 0;
+    padding: 0;
+	height: auto;
+	min-width: 360px;
 }
 
 .menu li {
@@ -101,6 +126,14 @@ header {
     height: 42px;
 	cursor: pointer;
 	position: relative;
+	z-index: 2;
+}
+
+.burger_active {
+    z-index: 4;
+	position: absolute;
+	top: 20px;
+	right: 20px;
 }
 
 .burger span, .burger span::before, .burger span::after {
@@ -132,12 +165,16 @@ header {
 }
     
  .burger_active span::before  {
+	background: #363636;
     transform: rotate(45deg);
+	width: 30px;
     top: 10px;
 }
 
  .burger_active span::after  {
+	background: #363636;
     transform: rotate(-45deg);
+	width: 30px;
     top: 10px;
 } 
 
@@ -150,8 +187,18 @@ header {
 }
 
 .header__contact_mail {
-	font-weight: 18px;
+	font-size: 18px;
 	margin: 6px 0 38px;
+}
+
+.header__contact_mobile {
+	display: none;
+	border-radius: 50%;
+	background: #c8b7a5;
+	width: 33px;
+	height: 33px;
+	position: relative;
+	z-index: 2;
 }
 
 /*media*/ 
@@ -161,12 +208,45 @@ header {
 }
 
 @media screen and (max-width: 1023px) {
+	header {
+		padding-top: 15px;
+	}
 	
-
+	.header__center-block {
+		top: 15px;
+	}
+	
+	.languages {
+		margin-bottom: 20px;
+	}
+	
+	.logo {
+		width: 200px;
+		height: 83px;
+	}
+	
+	.header__contact_mail {
+		margin: 6px 0 20px;
+	}
 }
 
 @media screen and (max-width: 767px) {
-    
+	.languages__item {
+		font-size: 15px;
+	}
+	
+	.header__contacts {
+		display: none;
+	}
+	
+	.header__contact_mobile {
+		display: block;
+	}
+	
+	.logo {
+		width: 115px;
+		height: 50px;
+	}
 }
 
 @media screen and (max-width: 639px) {
