@@ -41,6 +41,18 @@ $(document).ready(function(){
 		]
 	}); 
 	
+	$('.partners-mobile').slick({
+		infinite: true,
+		slidesToShow: 1
+	}); 
+	
+	if ( window.innerWidth < 1024 ) {
+		$('.figures__wrapper').slick({
+		infinite: true,
+		slidesToShow: 1
+	}); 
+	};
+	
 // catalog-list
 	
     $('.catalog-list ul li ul').hide();

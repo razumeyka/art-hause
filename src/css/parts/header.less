@@ -47,15 +47,6 @@ header {
 	margin: 0 auto;
 }
 
-.logo-menu {
-    display: block;
-    background: url(../../images/logo-menu.png) no-repeat center;
-    background-size: contain;
-    width: 406px;
-    height: 157px;
-	position: relative;
-}
-
 .menu-screen {
 	display: none;
 	background: url(../../images/bg_menu.jpg) no-repeat center;
@@ -64,8 +55,8 @@ header {
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 100%;
 	z-index: 2;
+	padding: 50px 0 100px;
 }
 
 .menu-screen__background {
@@ -78,16 +69,26 @@ header {
 }
 
 .menu-screen__content {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-menu {
+    display: block;
+    background: url(../../images/logo-menu.png) no-repeat center;
+    background-size: contain;
+    width: 406px;
+    height: 157px;
+	position: relative;
+	margin-bottom: 120px;
 }
 
 .menu {
     margin: 0;
     padding: 0;
-	height: auto;
-	min-width: 360px;
+    height: auto;
+    min-width: 360px;
 }
 
 .menu li {
@@ -95,28 +96,58 @@ header {
     position: relative;
 }
 
+.menu>li.menu-item-has-children {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .menu>li {
-	width: 50%;
+	box-sizing: border-box;
+	margin: 0 auto;
+	width: 400px;
+    padding: 0 80px;
+}
+
+.menu>li:first-child {
+	float: left;
+}
+
+.menu>li:nth-child(3) {
+	float: left;
+}
+
+.menu>li:before {
+	content: "";
+	border-radius: 50%;
+	background-color: rgb(137, 137, 137);
+	width: 4px;
+	height: 4px;
+	position: absolute;
+	left: 67px;
+    top: 30px;
 }
 
 .menu li a {
     display: inline-block;
-	font: 700 26px "Arsenal";
+	font: 700 30px "Arsenal";
 	color: rgb(43, 42, 41);
     text-decoration: none;
     padding: 10px 0;  
 }
 
 .sub-menu {
-	padding-left: 20px;
+	padding-left: 7px;
+	margin-bottom: 25px;
 }
 
 .sub-menu li a {
     display: inline-block;
-	font: 400 17px "Circe";
+	font: 400 20px "Circe";
 	color: rgb(163, 139, 116);
     text-decoration: none;
-    padding: 5px 0;  
+    padding: 3px 0;  
+	max-width: 300px;
 }
 
 /*burger*/
@@ -131,9 +162,9 @@ header {
 
 .burger_active {
     z-index: 4;
-	position: absolute;
-	top: 20px;
-	right: 20px;
+    position: absolute;
+    top: 40px;
+    right: 55px;
 }
 
 .burger span, .burger span::before, .burger span::after {
@@ -178,6 +209,11 @@ header {
     top: 10px;
 } 
 
+.header__contacts {
+	position: relative;
+	z-index: 2;
+}
+
 .header__contact {
 	display: block;
 	font: 400 22px "Arsenal";
@@ -204,7 +240,9 @@ header {
 /*media*/ 
 
 @media screen and (max-width: 1279px) {
-	
+	.header__content {
+		padding: 0 15px;
+	}
 }
 
 @media screen and (max-width: 1023px) {
@@ -231,6 +269,32 @@ header {
 }
 
 @media screen and (max-width: 767px) {
+	.menu-screen {
+		padding: 15px 0 30px;
+	}
+	
+	.burger_active {
+		top: 20px;
+		right: 17px;
+	}
+
+	
+	.burger span::after {
+		top: 12px;
+	}
+	
+	.burger span::before {
+		display: none;
+	}
+	
+	.burger_active span::before {
+		display: block;
+	}
+	
+	.burger_active span::after {
+		top: 10px;
+	}
+	
 	.languages__item {
 		font-size: 15px;
 	}
@@ -246,6 +310,40 @@ header {
 	.logo {
 		width: 115px;
 		height: 50px;
+	}
+	
+	.menu>li.menu-item-has-children {
+		display: block;
+		float: none;
+		width: 220px;
+		padding: 0 15px;
+	}
+	
+	
+	.menu>li {
+		box-sizing: border-box;
+		width: 220px;
+		padding: 0 15px;
+		margin: 0 auto;
+	}
+	
+	.menu>li:before {
+		left: 7px;
+		top: 23px;
+	}
+	
+	.logo-menu {
+		width: 105px;
+		height: 40px;
+		margin-bottom: 35px;
+	}
+	
+	.menu li a {
+		font-size: 22px; 
+	}
+
+	.sub-menu li a {
+		font-size: 15px;
 	}
 }
 
