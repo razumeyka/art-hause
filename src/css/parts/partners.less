@@ -79,35 +79,35 @@
 }
 
 .partners__item-wr:hover .partners__partner_basf {
-	background-position: -418px -11px;
+	background-position-x: -418px;
 }
 
 .partners__item-wr:hover .partners__partner_wood {
-    background-position: -351px -50px;
+    background-position-x:  -351px;
 }
 
 .partners__item-wr:hover .partners__partner_teknos {
-    background-position: -410px 8px;
+    background-position-x:  -410px;
 }
 
 .partners__item-wr:hover .partners__partner_fordaq {
-    background-position: -459px 7px;
+    background-position-x:  -459px;
 }
 
 .partners__item-wr:hover .partners__partner_sberbank {
-    background-position: -342px -52px;
+    background-position-x:  -342px;
 }
 
 .partners__item-wr:hover .partners__partner_vtb {
-	background-position: -382px -1px;
+	background-position-x:  -382px;
 }
 
 .partners__item-wr:hover .partners__partner_muhlbock {
-    background-position: -325px 3px;
+    background-position-x:  -325px;
 }
 
 .partners__item-wr:hover .partners__partner_akzonobel {
-    background-position: -406px 7px;
+    background-position-x:  -406px;
 }
 
 .partners__description {
@@ -130,9 +130,14 @@
 /*media*/ 
 
 @media screen and (max-width: 1279px) {
-    .partners__partner {
-		width: 240px;
-		height: 190px;
+	
+	.partners__item {
+		width: 33.3333%;
+		padding-top: 33.3333%;
+	}
+	
+	.partners__item:nth-child(4n) {
+		display: none;
 	}
 	
 }
@@ -169,9 +174,8 @@
 }
 
 @media screen and (max-width: 767px) {
-	.partners__partner {
-		width: 200px;
-		height: 110px;
+	.partners__item:nth-child(4n) {
+		display: block;
 	}
 	
 }
