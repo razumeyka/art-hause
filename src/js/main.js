@@ -46,12 +46,52 @@ $(document).ready(function(){
 		slidesToShow: 1
 	}); 
 	
-	if ( window.innerWidth < 1024 ) {
-		$('.figures__wrapper').slick({
-		infinite: true,
-		slidesToShow: 1
-	}); 
-	};
+
+	
+	$('.figures__wrapper').slick({  
+		mobileFirst: true, 
+		responsive: [
+			  {
+                breakpoint: 2000,
+                settings: "unslick"
+            },
+            {
+                breakpoint: 1600,
+                settings: "unslick"
+            },
+            {
+                breakpoint: 1024,
+                settings: "unslick"
+            },
+            {
+                breakpoint: 768,
+                settings:  {
+					infinite: true,
+					slidesToShow: 1
+				}
+            },
+            {
+                breakpoint: 480,
+                settings:  {
+					infinite: true,
+					slidesToShow: 1
+				}
+			}
+		]
+	});
+	
+	$(window).resize(function(){
+		if (window.innerWidth < 1024) {
+		  $('.figures__wrapper').slick({  
+			infinite: true,
+			slidesToShow: 1
+		  });
+		}
+	  });
+
+	
+	
+
 	
 // catalog-list
 	
