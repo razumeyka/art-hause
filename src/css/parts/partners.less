@@ -38,97 +38,83 @@
 	width: 300px;
 	height: 230px;
 	position: relative;
+	transition: transform 0.8s ease-in-out;
+	transform: translate(0, 0);
 }
 
 .partners__partner_basf {
-	background: url(../../images/logo/basf.png) no-repeat center;
-	background-size: contain;
+	background: url(../../images/logo/basf_sprites.png) no-repeat -39px -11px;
 }
 
-.partners__partner_wood{	
-	background: url(../../images/logo/wood.png) no-repeat center;
-	background-size: contain;
+.partners__partner_wood {
+    background: url(../../images/logo/wood_sprites.png) no-repeat -15px -50px;
 }
 
-.partners__teknos_teknos {
-    background: url(../../images/logo/t.png) no-repeat center;
-	background-size: contain;
+.partners__partner_teknos {
+    background: url(../../images/logo/teknos_sprites.png) no-repeat -39px 8px;
 }
 
-.partners__teknos_fordaq {
-    background: url(../../images/logo/fordaq.png) no-repeat center;
-	background-size: contain;
+.partners__partner_fordaq {
+    background: url(../../images/logo/fordaq_sprites.png) no-repeat -51px 7px;
 }
 
 .partners__partner_sberbank {
-    background: url(../../images/logo/sber.png) no-repeat center;
-	background-size: contain;
+    background: url(../../images/logo/sber_sprites.png) no-repeat -14px -52px;
 }
 
 .partners__partner_vtb {
-	background: url(../../images/logo/vtb.png) no-repeat center;
-	background-size: contain;
+    background: url(../../images/logo/vtb_sprites.png) no-repeat -24px -1px;
 }
 
 .partners__partner_muhlbock {
-    background: url(../../images/logo/m.png) no-repeat center;
-	background-size: contain;
+    background: url(../../images/logo/muhl_sprites.png) no-repeat -9px 3px;
 }
 
 .partners__partner_akzonobel {
-    background: url(../../images/logo/akzo.png) no-repeat center;
-	background-size: contain;
+    background: url(../../images/logo/akzo_sprites.png) no-repeat -35px 7px;
 }
 
 .partners__item-wr:hover .partners__partner {
-	transition: all 0.8s ease-in-out;
-	transform: translate(0, -40px);
+	transform: translate(0, -50px);
 }
 
 .partners__item-wr:hover .partners__partner_basf {
-	background: url(../../images/logo/basf2.png) no-repeat center;
-	background-size: contain;
+	background-position: -418px -11px;
 }
 
-.partners__item-wr:hover .partners__partner_wood{	
-	background: url(../../images/logo/wood2.png) no-repeat center;
-	background-size: contain;
+.partners__item-wr:hover .partners__partner_wood {
+    background-position: -351px -50px;
 }
 
-.partners__item-wr:hover .partners__teknos_teknos {
-    background: url(../../images/logo/t2.png) no-repeat center;
-	background-size: contain;
+.partners__item-wr:hover .partners__partner_teknos {
+    background-position: -410px 8px;
 }
 
-.partners__item-wr:hover .partners__teknos_fordaq {
-    background: url(../../images/logo/fordaq2.png) no-repeat center;
-	background-size: contain;
+.partners__item-wr:hover .partners__partner_fordaq {
+    background-position: -459px 7px;
 }
 
 .partners__item-wr:hover .partners__partner_sberbank {
-    background: url(../../images/logo/sber2.png) no-repeat center;
-	background-size: contain;
+    background-position: -342px -52px;
 }
 
 .partners__item-wr:hover .partners__partner_vtb {
-	background: url(../../images/logo/vtb2.png) no-repeat center;
-	background-size: contain;
+	background-position: -382px -1px;
 }
 
 .partners__item-wr:hover .partners__partner_muhlbock {
-    background: url(../../images/logo/m2.png) no-repeat center;
-	background-size: contain;
+    background-position: -325px 3px;
 }
 
 .partners__item-wr:hover .partners__partner_akzonobel {
-    background: url(../../images/logo/akzo2.png) no-repeat center;
-	background-size: contain;
+    background-position: -406px 7px;
 }
 
 .partners__description {
 	font: 400 20px "Circe";
 	color: rgb(54, 54, 54);
 	text-align: center;
+	padding: 0 10px;
 	max-width: 300px;
 	position: absolute;
 	opacity: 0;
