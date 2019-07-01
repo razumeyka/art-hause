@@ -51,27 +51,25 @@
 	left: auto;
 }
 
-.slick-next:before {
-    content: ">";
-    color: #fff;
-    font-size: 34px;
-    width: 10px;
-    height: 10px;
-    position: absolute;
-    top: 24px;
-    left: 20px;
-}
-
-.slick-prev:before {
+.slick-next:before, .slick-prev:before {
     content: "<";
     color: #fff;
-    font-size: 34px;
-    width: 10px;
-    height: 10px;
+    font-size: 36px;
+    width: 13px;
+    height: 16px;
     position: absolute;
-    top: 24px;
-    left: 17px;
+    top: 0;
+    left: 18px;
+    bottom: 0;
+    margin: auto 0;
+    line-height: 11px;
 }
+
+.slick-next:before {
+    content: ">";
+	left: 20px;
+}
+
 
 /* Dots */
 
@@ -187,6 +185,10 @@
 		right: 0px;
 		left: auto;
 	}
+	
+	.slick-next:before {
+		left: 12px;
+	}
 
 }
 
@@ -197,18 +199,20 @@
 		width: 32px;
 		height: 32px;
 	}
+
+	.slick-next:before, .slick-prev:before {
+		font-size: 22px;
+		width: 10px;
+		height: 12px;
+	}
 	
 	.slick-prev:before {
-		top: 15px;
-		left: 8px;
+		left: 10px;
 	}
 	
 	.slick-next:before {
-		top: 15px;
-		left: 11px;
+		left: 12px;
 	}
-
-
 
 }
 
