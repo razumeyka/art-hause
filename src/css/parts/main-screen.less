@@ -9,7 +9,7 @@
     padding-bottom: calc(56.25% + 200px);
     padding-right: calc(130% + 200px);
     margin-top: -100px;
-	margin-left: -200px;
+	margin-left: calc(-15% - 103px);
     width: 0;
     height: 0;
     overflow: hidden;
@@ -48,6 +48,7 @@
 	font: 700 75px "Arsenal";
 	color: rgb(255, 255, 255);
 	text-align: center;
+	white-space: nowrap;
 }
 
 .main-screen__small-caption {
@@ -60,8 +61,8 @@
 }
 
 .main-screen__mouse {
-	background: #fec100;
-	width: 30px;
+	background: url('../../images/sprites.png') no-repeat -160px -18px;;
+	width: 29px;
 	height: 40px;
 	position: absolute;
 	bottom: 30px;
@@ -73,6 +74,9 @@
 /*media*/ 
 
 @media screen and (max-width: 1366px) {
+	.main-screen__caption {
+		font-size: 65px;
+	}
 	
 }
 
@@ -117,6 +121,7 @@
 	
     .main-screen__caption {
 		font-size: 26px;
+		white-space:normal;
 	}
 	
 	.main-screen__small-caption {
