@@ -65,6 +65,12 @@ button,input,select,textarea{
     margin:0 auto;
 }
 
+p {
+	font: 400 16px  "Circe";
+	line-height: 1.65;
+	color: rgb(54, 54, 54);
+}
+
 .flex {
     display: flex;
     flex-wrap: wrap;
@@ -74,13 +80,6 @@ button,input,select,textarea{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-}
-
-.white-block {
-	border: 1px solid rgb(217, 217, 217);
-	border-radius: 30px;
-	background-color: rgb(255, 255, 255);
-	box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.2);
 }
 
 /* buttons */
@@ -99,9 +98,28 @@ button,input,select,textarea{
 .button_transparent {
 	border: 2px solid #ffb629;
 	border-radius: 30px;
-	width: 204px;
+	width: 100%;
+	max-width: 204px;
 	height: 50px;
 	font: 400 19px/46px "Arsenal";
+	color: rgb(255, 170, 7);
+}
+
+.button_brown {
+	border: 2px solid rgb(204, 165, 122);
+	background-color: rgb(255, 255, 255);
+	max-width:  415px;
+	height: 55px;
+	font: 400 18px/55px "Circe";
+	color: rgb(204, 165, 122);
+}
+
+.button_brown:hover {
+	background-color: rgb(204, 165, 122);
+	color: rgb(255, 255, 255);
+}
+
+.button_transparent-white {
 	color: rgb(255, 255, 255);
 }
 
@@ -125,9 +143,6 @@ button,input,select,textarea{
     letter-spacing: 0.5px;
     margin-bottom: 50px;
 }
-
-
-
 
 
 

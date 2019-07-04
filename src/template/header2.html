@@ -1,21 +1,31 @@
-<header>  
+<header class="header-small">  
 	<div class="header__content flex_between">
-		<div class="burger">
-			<span></span>
-		</div>
-		<div class="header__center-block">
+		<div class="header-small__left-part flex">
+			<div class="burger">
+				<span></span>
+			</div>
 			<div class="languages flex">
 				<div class="languages__item">Ru</div>
 				<div class="languages__item">En</div>
 				<div class="languages__item">De</div>
 				<div class="languages__item">Zh</div>
 			</div>
-			<a href="/" class="logo"></a>
+		</div>
+		<div class="header__center-block">
+			<a href="/" class="logo logo_small"></a>
+			<div class="languages languages_mobile flex">
+				<div class="languages__item">Ru</div>
+				<div class="languages__item">En</div>
+				<div class="languages__item">De</div>
+				<div class="languages__item">Zh</div>
+			</div>
 		</div>
 		<div class="header__contacts">
-			<a href="tel:88005055403" class="header__contact header__contact_phone">8 800 505 54 03</a>
-			<a href="mailto:info@logarthouse.ru" class="header__contact header__contact_mail">info@logarthouse.ru</a>
-			<a href="#" class="header__call-order button button_transparent button_transparent-white">Задать вопрос</a>
+			<div class="header-small__contacts flex">
+				<a href="tel:88005055403" class="header__contact header__contact_phone">8 800 505 54 03</a>
+				<a href="mailto:info@logarthouse.ru" class="header__contact header__contact_mail">info@logarthouse.ru</a>
+			</div>
+			<a href="#" class="header__call-order button button_transparent">Задать вопрос</a>
 		</div>
 		<a href="#" class="header__contact_mobile"></a>
 	</div> 
