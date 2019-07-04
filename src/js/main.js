@@ -13,9 +13,9 @@ $(document).ready(function(){
         $('.burger').toggleClass( 'burger_active' ); 
     });
 	
-$(".menu-screen").stick_in_parent(
-	
-);
+	$(".menu-screen").stick_in_parent(
+
+	);
 	
 // languages
 	
@@ -23,7 +23,6 @@ $(".menu-screen").stick_in_parent(
 		$('.languages__item').removeClass('languages__item_active');
 		$(this).toggleClass('languages__item_active'); 
     });	
-	
 	
 // slick-slider
 	
@@ -53,7 +52,6 @@ $(".menu-screen").stick_in_parent(
 	
 // slider
 
-
 	function mobileOnlySlider() {
 		$('.figures__wrapper').slick({
 			infinite: true,
@@ -77,6 +75,46 @@ $(".menu-screen").stick_in_parent(
 			}
 		}
 	});
+	
+// 	GoogleMap
+	
+	initialize();
+
+	//инициализация карты в div "map"
+	
+	var map;
+	function initialize() {
+		map = new google.maps.Map(document.getElementById('map'), {
+			disableDefaultUI: true,
+			scrollwheel: false,
+			center: {lat: 59.2092976, lng: 39.7832951},
+			zoom: 12,
+			styles: [{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#e6e6e6"},{"visibility":"on"}]}]
+		});
+	}
+		
+	var markerImage = new google.maps.MarkerImage(
+		'../images/map-icon.png',
+		new google.maps.Size(75, 95),
+		new google.maps.Point(0, 0)
+	);
+	
+	var marker = new google.maps.Marker({
+		icon: markerImage,
+		position: {lat: 59.2092976, lng: 39.7832951},
+		map: map,
+		title:"Log Art House"
+	});
+		
+	
+// mask
+	
+    $('input[type="tel"]').mask("8-999-999-99-99");
+
+	
+	
+	
+	
 
 	
 // catalog-list
@@ -120,10 +158,6 @@ $(".menu-screen").stick_in_parent(
     });
 	
 	
-	
-	
-	
-		
 	
 // 	radio-buttons
 
@@ -220,8 +254,6 @@ $(".menu-screen").stick_in_parent(
 		$(this).toggleClass('accordion__question_active');
     });
 		
-// mask
-	
-    $('input[type="tel"]').mask("8-999-999-99-99");
+
 	
 }); 
