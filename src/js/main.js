@@ -76,35 +76,8 @@ $(document).ready(function(){
 		}
 	});
 	
-// 	GoogleMap
-	
-	initialize();
 
-	//инициализация карты в div "map"
-	
-	var map;
-	function initialize() {
-		map = new google.maps.Map(document.getElementById('map'), {
-			disableDefaultUI: true,
-			scrollwheel: false,
-			center: {lat: 59.2092976, lng: 39.7832951},
-			zoom: 12,
-			styles: [{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#e6e6e6"},{"visibility":"on"}]}]
-		});
-	}
-		
-	var markerImage = new google.maps.MarkerImage(
-		'../images/map-icon.png',
-		new google.maps.Size(75, 95),
-		new google.maps.Point(0, 0)
-	);
-	
-	var marker = new google.maps.Marker({
-		icon: markerImage,
-		position: {lat: 59.2092976, lng: 39.7832951},
-		map: map,
-		title:"Log Art House"
-	});
+
 		
 	
 // mask
@@ -257,3 +230,36 @@ $(document).ready(function(){
 
 	
 }); 
+
+// 	GoogleMap
+var markerImage, marker;
+
+function initMap() {
+	initialize();
+	
+	markerImage = new google.maps.MarkerImage(
+		'../images/map-icon.png',
+		new google.maps.Size(75, 95),
+		new google.maps.Point(0, 0)
+	);
+	
+	marker = new google.maps.Marker({
+		icon: markerImage,
+		position: {lat: 59.2092976, lng: 39.7832951},
+		map: map,
+		title:"Log Art House"
+	});		
+}
+
+//инициализация карты в div "map"
+
+var map;
+function initialize() {
+	map = new google.maps.Map(document.getElementById('map'), {
+		disableDefaultUI: true,
+		scrollwheel: false,
+		center: {lat: 59.2092976, lng: 39.7832951},
+		zoom: 12,
+		styles: [{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#e6e6e6"},{"visibility":"on"}]}]
+	});
+}
