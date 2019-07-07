@@ -1,0 +1,249 @@
+.production-page .inner-page__caption {
+    margin: 80px 0 50px;
+}
+
+.production-page__main-screen {
+    height: 1080px;
+    margin-bottom: 78px;
+}
+
+.production-page .main-screen__content {
+    padding: 0;
+}
+
+.production-page__centered {
+	text-align: center;
+}
+
+.production-page__caption {
+	font: 700 35px "Arsenal";
+	color: rgb(54, 54, 54);
+	text-align: center;
+	margin: 55px 0 20px;
+}
+
+.production-page__caption .production-page__after-caption {
+	display: none;
+	font: 400 28px "Arsenal";
+	color: rgb(255, 255, 255);
+	text-align: center;
+	position: relative;
+}
+
+.production-page__caption div {
+	position: relative;
+}
+
+.production-page__caption.active {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: url(../../images/bg_figures.jpg) no-repeat center;
+	background-size: cover;
+	height: 500px;
+    font: 700 60px "Arsenal";
+	font-size: 65px;
+	color: rgb(255, 255, 255);
+	position: relative;
+}
+
+.production-page__caption.active:before {
+	content: "";
+	background: rgba(109,87,69,0.6);
+	position: absolute;
+	left: 0px;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.production-page__caption.active .production-page__after-caption {
+	display: block;
+}
+
+.production-page__small-caption {
+	font: 700 24px "Arsenal";
+	color: rgb(54, 54, 54);
+}
+
+.production-page p {
+    font: 400 16px "Circe";
+    line-height: 1.9;
+    color: #363636;
+    margin: 30px 0;
+}
+	
+.img-text_reverse {
+	flex-direction: row-reverse;
+}
+
+.img-text__img {
+	width: 53%;
+	height: auto;
+}
+
+.img-text {
+	align-items: center;
+}
+
+.img-text__text {
+    box-sizing: border-box;
+    width: 47%;
+    padding: 0 0 0 35px;
+}
+
+.button_up {
+	margin-top: 15px;
+}
+
+.button_up.active {
+	display: none;
+}
+
+.button_down {
+	margin: 0 auto;
+}
+
+.img-text_reverse .img-text__text {
+	padding: 0px 50px 0px 0;
+}
+
+.img-text_img-small .img-text__img {
+	width: 30%;
+}
+
+.img-text_img-small .img-text__text {
+	width: 70%;
+}
+
+.production-page p.list__item {
+    margin: 15px 0;
+    line-height: 1.1;
+}
+
+.documents-screen {
+    background: url(../../images/bg_documents.jpg) no-repeat center;
+    background-size: cover;
+    padding: 78px 0 94px;
+    margin-top: 50px;
+}
+
+.documents-screen__caption {
+    font: 700 30px "Arsenal";
+    color: #fff;
+    text-align: center;
+    margin: 0 auto 40px;
+    max-width: 880px;
+}
+
+.documents-screen__documents {
+    margin-top: 80px;
+}
+
+.documents-screen__document {
+	box-sizing: border-box;
+	display: block;
+	width: 25%;
+	padding: 20px;
+	text-decoration: none;
+}
+
+.documents-screen__icon {
+	background: url(../../images/icons/document.png) no-repeat center;
+	width: 60px;
+	height: 80px;
+	margin: 0 auto 15px;
+}
+
+.documents-screen__name {
+	font: 400 22px "Circe";
+	color: rgb(217, 197, 176);
+	text-align: center;
+}
+
+
+
+
+/*media*/ 
+
+@media screen and (max-width: 1700px) {
+	.production-page__main-screen {
+		height: 800px;
+	}	
+}
+
+@media screen and (max-width: 1279px) {
+	.production-page__main-screen {
+		height: 600px;
+	}	
+
+}
+
+@media screen and (max-width: 1023px) {
+	.production-page__main-screen {
+		height: 400px;
+	}
+	
+	.production-page .main-screen__content {
+		padding: 0;
+	}
+	
+	.production-page__caption.active {
+		font-size: 22px;
+		height: 250px;
+	}
+	
+	.production-page__caption .production-page__after-caption {
+		font-size: 15px;
+	}
+	
+	.img-text {
+		display: block;
+	}
+	
+	.img-text__img {
+		width: 100%;
+		max-width: 400px;
+		height: 210px;
+		margin-bottom: 20px;
+	}
+	
+	.img-text_img-small .img-text__img {
+		width: 100%;
+		padding: 0;
+	}
+	
+	.img-text__text {
+		width: 100%;
+		padding: 0;
+	}
+	
+	.img-text_reverse .img-text__text {
+		padding: 0;
+	}
+	
+	.img-text_img-small .img-text__text {
+		width: 100%;
+		padding: 0;
+	}
+	
+	.button_up {
+		margin: 15px auto 0;
+		display: block;
+	}
+	
+	.production-page .slick-next, .production-page .slick-prev {
+		top: 50%;
+	}
+	
+	.documents-screen__document {
+		flex-direction: column;
+	}
+}
+
+@media screen and (max-width: 639px) {
+	.documents-screen__caption {
+	  font-size: 16px;
+	}
+}

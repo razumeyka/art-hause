@@ -1,0 +1,115 @@
+.news-item-page__slider {
+	margin: 50px 0;
+}
+
+.news-item-page .slick-next, .news-item-page .slick-prev {
+    top: 50%;
+}
+
+.news-item-page__slide {
+	justify-content: center;
+	border: none;
+	outline: none;
+}
+
+.news-item-page__slide {
+	position: relative;
+}
+
+.news-item-page__slide:before {
+	display: none;
+	content: "";
+	background: url(../../images/icons/lupa.png) no-repeat center;
+	width: 55px;
+	height: 55px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	z-index: 1000;
+}
+
+.news-item-page__slide:hover:before {
+	display: block;
+}
+
+.news-item-page__video {
+    position: relative;
+    z-index: -99;
+	width: 100%;
+    max-width: 742px;
+	height: 431px;
+    overflow: hidden;
+	margin: 0 auto;
+}
+
+.news-item-page__video-wr {
+    position: absolute;
+	width: 0;
+	height: 0;
+	padding-bottom: calc(56.25% + 200px);
+    padding-right: calc(110% + 100px);
+	margin-top: -100px;
+	margin-left: calc(-5% - 50px);
+	top: 0;
+	left: 0;
+}
+
+.news-item-page__video iframe {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+    pointer-events: none;
+	border: 0;
+}
+
+.news-item-page__video:after {
+	content: "";
+	background-color: rgba(47, 29, 9, 0.4);
+	position: absolute;
+    top: 0;
+	left: 0;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	padding: 250px 0 50px;
+	display: flex;
+	align-items: center;
+}
+
+/*media*/ 
+
+@media screen and (max-width: 1279px) {
+	
+	
+}
+
+@media screen and (max-width: 1023px) {
+	.news-item-page__slide-inner {
+		width: 240px;
+		height: 180px;
+	}
+	
+	.news-item-page__video {
+		height: 400px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.news-item-page__video {
+		height: 165px;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.news-item-page__slide-inner {
+		width: 190px;
+		height: 133px;
+	}
+	
+}
+

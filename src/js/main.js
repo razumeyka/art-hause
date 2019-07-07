@@ -13,9 +13,7 @@ $(document).ready(function(){
         $('.burger').toggleClass( 'burger_active' ); 
     });
 	
-	$(".menu-screen").stick_in_parent(
-
-	);
+	$(".menu-screen").stick_in_parent();
 	
 // languages
 	
@@ -48,9 +46,59 @@ $(document).ready(function(){
 	$('.partners-mobile').slick({
 		infinite: true,
 		slidesToShow: 1
-	}); 	
+	}); 
 	
-// slider
+	$('.news-item-page__slider').slick({
+		infinite: true,
+		slidesToShow: 4,
+		responsive: [
+			{
+			  breakpoint: 1280,
+			  settings: {
+				slidesToShow: 3
+			  }
+			},
+			{
+			  breakpoint: 1024,
+			  settings: {
+				slidesToShow: 2
+			  }
+			},
+			{
+			  breakpoint: 768,
+			  settings: {
+				slidesToShow: 1
+			  }
+			},
+		]
+	});
+
+	function mobileOnlySlider() {
+		$('.figures__wrapper').slick({
+			infinite: true,
+			slidesToShow: 1
+		});
+	}
+	
+
+	if(window.innerWidth < 1024) {
+		mobileOnlySlider();
+	}
+
+	$(window).resize(function(e){
+		if(window.innerWidth < 1024) {
+			if(!$('.figures__wrapper').hasClass('slick-initialized')){
+				mobileOnlySlider();
+			}
+
+		}else{
+			if($('.figures__wrapper').hasClass('slick-initialized')){
+				$('.figures__wrapper').slick('unslick');
+			}
+		}
+	});
+	
+// slider - only mobile
 
 	function mobileOnlySlider() {
 		$('.figures__wrapper').slick({
@@ -76,190 +124,112 @@ $(document).ready(function(){
 		}
 	});
 	
+	function mobileOnlySlider2() {		
+		$('.documents-screen__documents').slick({
+			infinite: true,
+			slidesToShow: 2,
+			responsive: [
+				{
+				  breakpoint: 768,
+				  settings: {
+					slidesToShow: 1
+				  }
+				},
+			]
+		});
+	}
 
+	if(window.innerWidth < 1024) {
+		mobileOnlySlider2();
+	}
+	
+	$(window).resize(function(e){
+		if(window.innerWidth < 1024) {
+			if(!$('.documents-screen__documents').hasClass('slick-initialized')){
+				mobileOnlySlider2();
+			}
 
-		
-	
-// mask
-	
-    $('input[type="tel"]').mask("8-999-999-99-99");
-
-	
-	
-	
-	
-
-	
-// catalog-list
-	
-    $('.catalog-list ul li ul').hide();
-    $('.catalog-list ul li').click(function(e){ 
-		e.preventDefault();
-        $(this).find("ul").slideToggle(500);
-    });
-	
-	$('.mobile-catalog').click( function() { 
-        $('.catalog-list').slideToggle(300);
-		if($('header .menu').is(':visible')) {
-			$('header .menu').hide();
-			$('.burger').removeClass( 'burger_active' ); 
+		}else{
+			if($('.documents-screen__documents').hasClass('slick-initialized')){
+				$('.documents-screen__documents').slick('unslick');
+			}
 		}
-		if($('.search').is(':visible')) {
-			$('.search').hide();
-		}
-    });
+	});
 	
-// search
-    
-    $('.mobile-search').click( function() { 
-        $('.search').slideToggle(300); 
-		if($('header .menu').is(':visible')) {
-			$('header .menu').hide();
-			$('.burger').removeClass( 'burger_active' ); 
-		}
-		if($('.catalog-list').is(':visible')) {
-			$('.catalog-list').hide();
-		}
-    });
-	
-	
-// 	favorite
-
-    $('.plate__favorite').click(function(e){ 
-		e.preventDefault();
-		$(this).toggleClass('active'); 
-    });
-	
-	
-	
-// 	radio-buttons
-
-    $('.radio-button').click(function(){ 
-		$('.slider-price__wrapper').css('margin-left','-'+$(this).index()+'00%'); 
-    });
-	
-// 	slick-slider	
-	
-	$('.reviews__content').slick({
+	$('.img-text__img').slick({
 		infinite: true,
 		slidesToShow: 1,
 		dots: false,
 		arrows: false,
 		autoplay: true,
-    	autoplaySpeed: 2000
+    	autoplaySpeed: 1000
 	});
 	
-// animation   
-     
-	$('.plates__item').viewportChecker({
-		classToAdd: 'plates__item_visible',
-		offset: 100
-	}); 
-	
-	$('.portfolio-screen__button-wr').viewportChecker({
-		classToAdd: 'portfolio-screen__button-wr_visible',
-		offset: 100
-	}); 
-	
-	$('.steps__icon').viewportChecker({
-		classToAdd: 'steps__icon_visible',
-		offset: 100
-	}); 
-	
-	$('.prices-screen__button-wr').viewportChecker({
-		classToAdd: 'prices-screen__button-wr_visible',
-		offset: 100
-	}); 
 	
 	
-// change photo
+// hidden text
 	
-	$('.wpcf7-form').hover(function(){
-		$('.team__photo').toggleClass('change');
-	});
-		
-	var scrollInput = $('.wpcf7-form-control-wrap').offset().top;
-	$(document).on('scroll', function() {
-		if ( window.innerWidth < 768 ) {
-			var scroll = $(document).scrollTop();
-			var height = window.innerHeight;
-			var sh = scroll + height;
-			if (sh > scrollInput) {
-				$('.team__photo').addClass('change');	
-			}	else {
-				$('.team__photo').removeClass('change');	
-			}
-		};
-	});	
-		
-	
-// info
-	
-	$('.calculator-item__icon').click(function(){
-		if ( window.innerWidth < 1280 ) {
-			var info = $(this).closest('.calculator-item__name-wr').find('.calculator-item__info');
-			if ( info.hasClass("active") ) {
-				$('.calculator-item__info').removeClass('active');
-			} else {
-				$('.calculator-item__info').removeClass('active');
-				info.addClass('active');
-			}
+    $(".production-page__more-info").slideUp(0);
+    $(".button_up").click(function(event){
+        event.preventDefault();
+        $(this).closest('.wrapper').find('.production-page__more-info').slideDown(500);
+		$(this).closest('.production-page__stage').find('.production-page__caption').addClass('active');
+		$(this).addClass('active');
+		var dest = $(this).attr('href'); 
+		if(dest !== undefined && dest !== '') { 
+			$('html').animate({ 
+				scrollTop: $(dest).offset().top 
+			}, 500 
+			);
 		}
-	});
-	
-	$('.calculator-item__icon').hover(function(){
-		if ( window.innerWidth > 1279 ) {
-			var info = $(this).closest('.calculator-item__name-wr').find('.calculator-item__info');
-			if ( info.hasClass("active") ) {
-				$('.calculator-item__info').removeClass('active');
-			} else {
-				$('.calculator-item__info').removeClass('active');
-				info.addClass('active');
-			}
-		}
-	});
-	
-// accordion
-	
-    $('.accordion__answer').hide();
-    $('.accordion__question').click(function(){
-        $(this).next().slideToggle(500);
-		$(this).toggleClass('accordion__question_active');
+		return false;
     });
-		
-
 	
-}); 
+    $(".button_down").click(function(event){
+        event.preventDefault();
+        $(this).closest('.production-page__more-info').slideUp(500);
+		$(this).closest('.production-page__more-info').closest('.wrapper').find('.button_up').removeClass('active');
+		$(this).closest('.production-page__stage').find('.production-page__caption').removeClass('active');
+		$(this).addClass('active');
+    });
+	
+	
+// mask
+	
+    $('input[type="tel"]').mask("8-999-999-99-99");
 
 // 	GoogleMap
-var markerImage, marker;
-
-function initMap() {
-	initialize();
 	
-	markerImage = new google.maps.MarkerImage(
-		'../images/map-icon.png',
-		new google.maps.Size(75, 95),
-		new google.maps.Point(0, 0)
-	);
+	var markerImage, marker;
+
+	function initMap() {
+		initialize();
+
+		markerImage = new google.maps.MarkerImage(
+			'../images/map-icon.png',
+			new google.maps.Size(75, 95),
+			new google.maps.Point(0, 0)
+		);
+
+		marker = new google.maps.Marker({
+			icon: markerImage,
+			position: {lat: 59.2092976, lng: 39.7832951},
+			map: map,
+			title:"Log Art House"
+		});		
+	}
+
+	//инициализация карты в div "map"
+
+	var map;
+	function initialize() {
+		map = new google.maps.Map(document.getElementById('map'), {
+			disableDefaultUI: true,
+			scrollwheel: false,
+			center: {lat: 59.2092976, lng: 39.7832951},
+			zoom: 12,
+			styles: [{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#e6e6e6"},{"visibility":"on"}]}]
+		});
+	}
 	
-	marker = new google.maps.Marker({
-		icon: markerImage,
-		position: {lat: 59.2092976, lng: 39.7832951},
-		map: map,
-		title:"Log Art House"
-	});		
-}
-
-//инициализация карты в div "map"
-
-var map;
-function initialize() {
-	map = new google.maps.Map(document.getElementById('map'), {
-		disableDefaultUI: true,
-		scrollwheel: false,
-		center: {lat: 59.2092976, lng: 39.7832951},
-		zoom: 12,
-		styles: [{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#e6e6e6"},{"visibility":"on"}]}]
-	});
-}
+});	
