@@ -22,7 +22,7 @@ $(document).ready(function(){
 		$(this).toggleClass('languages__item_active'); 
     });	
 	
-// languages
+// main-screen height
 	
 	function setHeiHeight() {
 		$('.video-background').css({
@@ -145,24 +145,16 @@ $(document).ready(function(){
 	function mobileOnlySlider2() {		
 		$('.documents-screen__documents').slick({
 			infinite: true,
-			slidesToShow: 2,
-			responsive: [
-				{
-				  breakpoint: 768,
-				  settings: {
-					slidesToShow: 1
-				  }
-				},
-			]
+			slidesToShow: 1,
 		});
 	}
 
-	if(window.innerWidth < 1024) {
+	if(window.innerWidth < 768) {
 		mobileOnlySlider2();
 	}
 	
 	$(window).resize(function(e){
-		if(window.innerWidth < 1024) {
+		if(window.innerWidth < 768) {
 			if(!$('.documents-screen__documents').hasClass('slick-initialized')){
 				mobileOnlySlider2();
 			}
