@@ -22,6 +22,24 @@ $(document).ready(function(){
 		$(this).toggleClass('languages__item_active'); 
     });	
 	
+// languages
+	
+	function setHeiHeight() {
+		$('.video-background').css({
+			height: $(window).height() + 'px'
+		});
+	}
+	
+	if(window.innerWidth > 1366) {
+		setHeiHeight(); 
+	}
+
+	$(window).resize(function(e){
+		if(window.innerWidth > 1366) {
+			setHeiHeight();
+		}
+	});
+	
 // slick-slider
 	
 	$('.slick-team').slick({
@@ -191,6 +209,20 @@ $(document).ready(function(){
 		$(this).closest('.production-page__more-info').closest('.wrapper').find('.button_up').removeClass('active');
 		$(this).closest('.production-page__stage').find('.production-page__caption').removeClass('active');
 		$(this).addClass('active');
+    });
+	
+    $(".plates__up-button").click(function(event){
+        event.preventDefault();
+        $(this).next('.plates__more-info').slideDown(500);
+		$(this).addClass('active');
+		$(this).parent().find('.plates__down-button').addClass('active');
+    });
+	
+    $(".plates__down-button").click(function(event){
+        event.preventDefault();
+        $(this).prev('.plates__more-info').slideUp(500);
+		$(this).removeClass('active');
+		$(this).parent().find('.plates__up-button').removeClass('active');
     });
 	
 	

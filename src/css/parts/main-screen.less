@@ -6,10 +6,8 @@
 .video-background {
     position: relative;
     z-index: -99;
-    padding-bottom: calc(56.25% + 200px);
-    padding-right: calc(130% + 200px);
-    margin-top: -100px;
-	margin-left: calc(-15% - 103px);
+    padding-right: calc(130% + 400px);
+	margin-left: calc(-15% - 200px);
     width: 0;
     height: 0;
     overflow: hidden;
@@ -74,10 +72,17 @@
 /*media*/ 
 
 @media screen and (max-width: 1366px) {
+	.video-background {
+		height: 0;
+		padding-bottom: calc(56.25% + 200px);
+		margin-top: -100px;
+		padding-right: calc(130% + 200px);
+    	margin-left: calc(-15% - 100px);
+	}
+	
 	.main-screen__caption {
 		font-size: 65px;
 	}
-	
 }
 
 @media screen and (max-width: 1279px) {

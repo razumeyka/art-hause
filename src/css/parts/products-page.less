@@ -1,0 +1,137 @@
+.products-page  .inner-page {
+    padding-bottom: 0;
+}
+
+.products-page__buttons {
+    justify-content: center;
+    margin: 39px 0 18px;
+}
+
+.products-page__buttons .button {
+    width: 265px;
+    margin: 0 10px;
+}
+
+.products-page  .plates {
+    padding-bottom: 260px;
+}
+
+.products-page .plates__plate {
+	position: relative;
+	padding-bottom: 180px
+}
+
+.products-page .plates__description {
+	-webkit-transition: all 0.2s linear;
+     -moz-transition: all 0.2s linear;
+     -o-transition: all 0.2s linear;
+     transition: all 0.2s linear;
+}
+
+.products-page .plates__plate .plates__text {
+    box-sizing: border-box;
+    background: #fff;
+    padding: 20px 25px 40px;
+	position: absolute;
+	top: 260px;
+	left: 20px;
+	right: 20px;
+	box-sizing: border-box;
+	z-index: 1;
+}
+
+@media screen and (min-width: 1024px) {
+	.products-page .plates__plate:hover .plates__text {
+		box-shadow: 0 0 20px 0 #efeded;
+	} 	
+	
+	.products-page .plates__plate:hover .plates__description {
+		height: 100%;
+		overflow: hidden;
+	}
+}
+
+.products-page .plates__description {
+    height: 23px;
+    overflow: hidden;
+}
+
+.plates__characteristic {
+    font: 400 15px Circe;
+    color: #363636;
+    line-height: 1.75;
+}
+
+.plates__characteristic span {
+	font-weight: 700;
+}
+
+.plates__button {
+	max-width: 260px;
+	background: #ffffff;
+	margin-top: 18px;
+}
+	
+.plates__down-button, .plates__up-button {
+	display: none;
+	font: 400 18px "Circe";
+	color: rgb(204, 165, 122);
+}
+	
+.plates__up-button.active {
+	display: none;
+}
+
+.plates__down-button.active {
+	display: block;
+}
+	
+/*media*/ 
+
+@media screen and (max-width: 1279px) {
+		
+}
+
+@media screen and (max-width: 1023px) {
+	.products-page .plates__description {
+		height: auto;
+	}
+	
+	.plates__up-button {
+		display: block;
+	}
+	
+	.products-page .plates__plate .plates__text {
+		text-align: center;
+	}
+	
+	.plates__more-info {display: none;}
+}
+
+@media screen and (max-width: 767px) {
+	.products-page__buttons {
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	.products-page .plates__plate .plates__text {
+		position: static;
+	}
+	
+	.products-page__buttons .button {
+		margin: 10px 0;
+	}
+	
+    .products-page .plates__img {
+		display: block;
+	}
+	
+	.products-page .plates__plate {
+		padding: 20px 0;
+	}
+	
+}
+
+@media screen and (max-width: 639px) {
+	
+}
