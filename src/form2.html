@@ -1,28 +1,56 @@
-<form>
-	<input type="text" class="form__input" placeholder="Имя">
-	<input type="tel" class="form__input" placeholder="Телефон">
-	<input type="mail" class="form__input" placeholder="E-mail">
-	<div class="file flex">		
-		<div>Прикрепить файл</div>
-		<div class="file__button button button_orange">
-			<label class="">	
-				<span>Обзор</span>	
-				<input type="file" class="">	
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" initial-scale=1>
+    <link rel="stylesheet" href="css/main.css">
+    <title>Log Art House</title>
+    <script src="/js/jquery-3.2.1.min.js"></script>
+	<script src="/js/main.js"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzHVtvUuG-jFjO1xK_DaNmK5PTuPIGFho&callback=initMap"
+	type="text/javascript"></script>
+</head>
+<body>
+	<div class="popup-form__caption">Рассчитать проект</div>
+	<form>
+		<input type="text" class="form__input" placeholder="Имя">
+		<input type="tel" class="form__input" placeholder="Телефон">
+		<input type="mail" class="form__input" placeholder="E-mail">
+		<div class="file flex">		
+			<div>Прикрепить файл</div>
+			<div class="file__button button button_orange">
+				<label class="">	
+					<span>Обзор</span>	
+					<input type="file" class="">	
+				</label>
+			</div>		
+		</div>
+		<div class="form__data-policy">
+			<label class="form__checkbox-wr">
+				<input type="checkbox"/>
+				<span class="form__checkbox"></span>
 			</label>
-		</div>		
-	</div>
-	<div class="form__data-policy">
-		<label class="form__checkbox-wr">
-			<input type="checkbox"/>
-			<span class="form__checkbox"></span>
-		</label>
-		<div class="form__conf">Я согласен с <a href="#">политикой персональных данных</a></div>
-	</div>	
-	<button class="footer__button button button_orange">Отправить</button>
-</form>
+			<div class="form__conf">Я согласен с <a href="#">политикой персональных данных</a></div>
+		</div>	
+		<button class="footer__button button button_orange">Отправить</button>
+	</form>
+</body>
+</html> 
+
 
 
 <style>
+	
+	body {
+		background: #b29578;
+		min-width: 250px;
+	}
+	
+	.popup-form__caption {
+		font: 400 26px "Circe";
+		color: rgb(255, 255, 255);
+		text-align: center;
+	}
 	
 	.form__input {
 		background: transparent;
@@ -124,7 +152,7 @@
 		height: 38px;
 		line-height: 38px;
 		box-shadow: none;
-		margin: -30px -1px 0 auto;
+		margin: -8px -1px 0 auto;
 		cursor: pointer;
 	}
 
@@ -177,7 +205,16 @@
 		}
 	}
 
-	@media screen and (max-width: 400px) {
+	@media screen and (max-width: 427px) {
+		
+		body {
+			background: #ffffff;
+		}
+		
+		.popup-form__caption {
+		  color: rgb(43, 42, 41);
+		}
+		
 		.form__input {
 			border: 2px solid #b29578;
 			color: rgb(178, 149, 120);

@@ -1,19 +1,39 @@
-<form>
-	<input type="text" class="form__input" placeholder="Имя">
-	<input type="tel" class="form__input" placeholder="Телефон">
-	<input type="mail" class="form__input" placeholder="E-mail">
-	<div class="form__data-policy">
-		<label class="form__checkbox-wr">
-			<input type="checkbox"/>
-			<span class="form__checkbox"></span>
-		</label>
-		<div class="form__conf">Я согласен с <a href="#">политикой персональных данных</a></div>
-	</div>
-	<button class="footer__button button button_orange">Отправить</button>
-</form>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" initial-scale=1>
+    <link rel="stylesheet" href="css/main.css">
+    <title>Log Art House</title>
+    <script src="/js/jquery-3.2.1.min.js"></script>
+	<script src="/js/main.js"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzHVtvUuG-jFjO1xK_DaNmK5PTuPIGFho&callback=initMap"
+	type="text/javascript"></script>
+</head>
+<body>
+	<form>
+		<input type="text" class="form__input" placeholder="Имя">
+		<input type="tel" class="form__input" placeholder="Телефон">
+		<input type="mail" class="form__input" placeholder="E-mail">
+		<div class="form__data-policy">
+			<label class="form__checkbox-wr">
+				<input type="checkbox"/>
+				<span class="form__checkbox"></span>
+			</label>
+			<div class="form__conf">Я согласен с <a href="#">политикой персональных данных</a></div>
+		</div>
+		<button class="footer__button button button_orange">Отправить</button>
+	</form>
+</body>
+</html> 
 
 
 <style>
+	
+	body {
+		background: transparent;
+		min-width: 250px;
+	}
 	
 	.form__input {
 		background: transparent;

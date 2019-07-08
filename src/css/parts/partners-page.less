@@ -17,6 +17,11 @@
 	margin: 0 10px;
 }
 
+.partners-page__buttons .button.active {
+	background-color: rgb(204, 165, 122);
+	color: rgb(255, 255, 255);
+}
+
 .partners-page__button-wr {
     justify-content: center;
     margin-top: 67px;
@@ -24,6 +29,32 @@
 
 .partners-page__button-wr .button {
     max-width: 260px;
+}
+
+.slider-partners {
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+.slider-partners__wrapper {
+	position: relative;
+	width: 500%;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	transition: margin-left 0.5s linear 0s;
+    -webkit-transition: margin-left 0.5s linear 0s;
+    -o-transition: margin-left 0.5s linear 0s;
+}
+
+.slider-partners__slide {
+	width: 20%;
+	display: inline;
+	float: left;
+	overflow: hidden;
+	padding-bottom: 30px;
 }
 
 /*media*/ 

@@ -40,6 +40,15 @@ $(document).ready(function(){
 		}
 	});
 	
+// 	carousel
+
+    $('.partners-page__buttons .button').click(function(e){ 
+		e.preventDefault();
+		$('.partners-page__buttons .button').removeClass('active');
+		$('.slider-partners__wrapper').css('margin-left','-'+$(this).index()+'00%'); 
+		$(this).addClass('active'); 
+    });
+	
 // slick-slider
 	
 	$('.slick-team').slick({
