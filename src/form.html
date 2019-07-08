@@ -1,0 +1,149 @@
+<form>
+	<input type="text" class="form__input" placeholder="Имя">
+	<input type="tel" class="form__input" placeholder="Телефон">
+	<input type="mail" class="form__input" placeholder="E-mail">
+	<div class="form__data-policy">
+		<label class="form__checkbox-wr">
+			<input type="checkbox"/>
+			<span class="form__checkbox"></span>
+		</label>
+		<div class="form__conf">Я согласен с <a href="#">политикой персональных данных</a></div>
+	</div>
+	<button class="footer__button button button_orange">Отправить</button>
+</form>
+
+
+<style>
+	
+	.form__input {
+		background: transparent;
+		display: block;
+		box-sizing: border-box;
+		border: 2px solid rgb(255, 255, 255);
+		border-radius: 5px;
+		height: 59px;
+		width: 100%;
+		max-width: 482px;
+		font: 400 18px "Circe";
+		color: rgb(217, 197, 176);
+		outline: none;
+		padding: 10px 20px;
+		margin: 17px auto;
+	}
+
+	.form__input::-webkit-input-placeholder {
+		color:#ffffff;
+	}
+
+	.form__input::-moz-placeholder          {
+		color:#ffffff;
+	}/* Firefox 19+ */
+
+	.form__input:-moz-placeholder           {
+		color:#ffffff;
+	}/* Firefox 18- */
+
+	.form__input:-ms-input-placeholder      {
+		color:#ffffff;
+	}
+
+	.form__input:not([type=submit]):focus {
+		border: 2px solid #c1ad99;
+	}
+
+	.form__data-policy {
+		display: flex;
+		flex-wrap: nowrap;
+		margin: 32px auto 22px;
+	}
+
+	.form__checkbox-wr {
+		box-sizing: border-box;
+		padding: 0 5px;
+		text-align: center;
+	}
+
+	.form__checkbox-wr input {
+		display: none;
+	}
+
+	.form__checkbox {
+		position: relative;
+		cursor: pointer;
+	}
+
+	.form__checkbox:before {
+		content: '';
+		border-radius: 5px;
+		background-color: rgb(236, 232, 227);
+		width: 19px;
+		height: 19px;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	.form__checkbox-wr input:checked + .form__checkbox:before {
+		background: url(../../images/sprites.png) no-repeat -86px -87px #f8fefe;
+	}
+
+	.form__conf, .form__conf a{
+		font: 400 16px "Circe";
+		color: rgb(255, 255, 255);
+		text-decoration: none;
+	}
+
+	.form__conf {
+		padding-left: 30px;
+	}
+
+	.button {
+		width: 100%;
+		max-width: 257px;
+		display:block;
+		box-sizing: border-box;
+		cursor: pointer;
+		text-decoration: none;
+		outline: none;
+		border: none;
+		text-align: center;
+		padding: 0 15px;
+		background: rgb(254,193,0);
+		background-image: -moz-linear-gradient( 90deg, rgb(255,169,0) 0%, rgb(254,193,0) 100%);
+		background-image: -webkit-linear-gradient( 90deg, rgb(255,169,0) 0%, rgb(254,193,0) 100%);
+		background-image: -ms-linear-gradient( 90deg, rgb(255,169,0) 0%, rgb(254,193,0) 100%);
+		box-shadow: 0 4px 0 0 #7e5300;
+		border-radius: 5px;
+		width: 257px;
+		height: 67px;
+		font: 400 18px/67px "Arsenal";
+		letter-spacing: 0.5px;
+		color: rgb(255, 255, 255);
+		margin: 0 auto;
+	}
+
+	/*media*/ 
+
+	@media screen and (min-width: 1921px) {
+
+	}
+
+	@media screen and (max-width: 1279px) {
+
+	}
+
+	@media screen and (max-width: 1023px) {
+
+	}
+
+	@media screen and (max-width: 767px) {
+		.form__data-policy {
+			justify-content: center;
+		}
+	}
+
+	@media screen and (max-width: 639px) {
+
+	}
+
+</style>

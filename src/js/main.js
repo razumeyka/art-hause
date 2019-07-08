@@ -242,6 +242,24 @@ $(document).ready(function(){
 		$(this).removeClass('active');
 		$(this).parent().find('.plates__up-button').removeClass('active');
     });
+
+// fancybox
+	
+	function mobileFancy() {
+		$(".fancybox-slide").addClass('mobile');
+	}
+	
+	if(window.innerWidth < 501) {
+		mobileFancy();
+	}
+	
+	$(window).resize(function(e){
+		if(window.innerWidth < 501) {
+			mobileFancy();
+		}else{
+			$(".fancybox-slide").removeClass('mobile');
+		}
+	});
 	
 	
 // mask
