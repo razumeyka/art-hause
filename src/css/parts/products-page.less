@@ -85,6 +85,62 @@
 .plates__down-button.active {
 	display: block;
 }
+
+/*projects-page*/ 
+
+.projects-page .plates__caption {
+	text-align: center;
+	margin: 10px 0;
+}
+
+.projects-page  .plates__button {
+    margin: 18px auto;
+    display: block;
+}
+
+/*project-page*/ 
+
+.project-page .inner-page {
+	padding:  66px 0 100px;
+}
+
+.project-page__small-caption {
+	font: 700 22px "Circe";
+	margin-bottom: 15px;
+}
+
+.project-page__list-caption {
+	font: 400 20px "Circe";
+}
+
+.img-text ul {
+	padding-left: 15px;
+}
+
+.img-text li {
+	font: 400 16px "Circe";
+	color: rgb(54, 54, 54);
+	list-style: none;
+	position: relative;
+	margin: 5px 0;
+}
+
+.img-text li:before {
+    content: "";
+    border-radius: 50%;
+    background-color: #d9c5b0;
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    top: 8px;
+    left: -18px;
+}
+
+.project-page__button {
+	margin: 0 auto;
+}
+
+
 	
 /*media*/ 
 
@@ -122,12 +178,16 @@
 		margin: 10px 0;
 	}
 	
-    .products-page .plates__img {
+    .products-page .plates__img, .projects-page .plates__img {
 		display: block;
 	}
 	
-	.products-page .plates__plate {
+	.products-page .plates__plate, .projects-page .plates__plate{
 		padding: 20px 0;
+	}
+	
+	.projects-page .plates__description {
+		padding: 0 15px;
 	}
 	
 }
