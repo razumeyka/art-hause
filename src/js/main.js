@@ -116,6 +116,32 @@ $(document).ready(function(){
 		}
 	});
 	
+// product-slider
+	
+	$('.slider-for').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		fade: true,
+		asNavFor: '.slider-nav'
+	});
+	
+	$('.slider-nav').slick({
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		asNavFor: '.slider-for',
+		arrows: true,
+		focusOnSelect: true,
+		responsive: [
+			{
+			  breakpoint: 500,
+			  settings: {
+				slidesToShow: 2
+			  }
+			},
+		]
+	});
+	
 // slider - only mobile
 
 	function mobileOnlySlider() {
