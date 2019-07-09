@@ -25,8 +25,8 @@ $(document).ready(function(){
 // main-screen height
 	
 	function setHeiHeight() {
-		$('.video-background').css({
-			height: $(window).height() + 'px'
+		$('.home .main-screen .video-background').css({
+			height: $(window).height() + 100 + 'px'
 		});
 	}
 	

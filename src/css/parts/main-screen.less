@@ -6,13 +6,18 @@
 .video-background {
     position: relative;
     z-index: -99;
-	padding-bottom: calc(56.25% + 200px);
-    margin-top: calc(-25% - 100px);
-    padding-right: calc(130% + 400px);
-	margin-left: calc(-15% - 200px);
+    padding-bottom: calc(56.25% + 200px);
+	margin-top: -100px;
+	padding-right: calc(130% + 200px);
+	margin-left: calc(-15% - 100px);
     width: 0;
     height: 0;
     overflow: hidden;
+}
+
+.home .main-screen .video-background {
+	height: auto;
+	padding-bottom: 0;
 }
 
 .video-background iframe {
@@ -74,12 +79,10 @@
 /*media*/ 
 
 @media screen and (max-width: 1366px) {
-	.video-background {
+	.home .main-screen .video-background {
 		height: 0;
 		padding-bottom: calc(56.25% + 200px);
 		margin-top: -100px;
-		padding-right: calc(130% + 200px);
-    	margin-left: calc(-15% - 100px);
 	}
 	
 	.main-screen__caption {
@@ -148,10 +151,20 @@
 		margin-top: -300px;
 		margin-left: 0;
 	}
+	
+	.home .main-screen .video-background {
+		height: 0;
+		padding-bottom: 250%;
+		margin-top: -300px;
+	}
 }
 
 @media screen and (max-width: 500px) {	
 	.video-background {
+		margin-top: -200px;
+	}
+	
+	.home .main-screen .video-background {
 		margin-top: -200px;
 	}
 }
