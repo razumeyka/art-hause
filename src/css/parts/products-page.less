@@ -26,6 +26,7 @@
      -moz-transition: all 0.2s linear;
      -o-transition: all 0.2s linear;
      transition: all 0.2s linear;
+	overflow: hidden;
 }
 
 .products-page .plates__plate .plates__text {
@@ -41,18 +42,12 @@
 }
 
 @media screen and (min-width: 1024px) {
-	.products-page .plates__plate:hover .plates__text {
+	.products-page .plates__plate .plates__text.active {
 		box-shadow: 0 0 20px 0 #efeded;
 	} 	
-	
-	.products-page .plates__plate:hover .plates__description {
-		height: 100%;
-		overflow: hidden;
-	}
 }
 
 .products-page .plates__description {
-    height: 23px;
     overflow: hidden;
 }
 
@@ -84,6 +79,10 @@
 
 .plates__down-button.active {
 	display: block;
+}
+
+.product-page .inner-page {
+    padding: 66px 0 100px;
 }
 
 .product-page__photos {
@@ -200,6 +199,12 @@
 	font: 400 20px "Circe";
 }
 
+.project-page .img-text__img {
+	background: url(../../images/slide1.png) no-repeat center;
+	background-size: cover;
+	height: 260px;
+}
+
 .img-text ul {
 	padding-left: 15px;
 }
@@ -224,7 +229,7 @@
 }
 
 .project-page__button {
-	margin: 0 auto;
+    margin: 30px auto 0;
 }
 
 

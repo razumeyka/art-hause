@@ -201,7 +201,7 @@ $(document).ready(function(){
 		}
 	});
 	
-	$('.img-text__img').slick({
+	$('.production-page .img-text__img').slick({
 		infinite: true,
 		slidesToShow: 1,
 		dots: false,
@@ -238,9 +238,16 @@ $(document).ready(function(){
 		$(this).addClass('active');
     });
 	
+	$(".plates__more-info").hide();
+	$(".products-page .plates__plate").hover(function(){
+        $(this).find('.plates__text').find('.plates__description').find('.plates__more-info').slideToggle(500);
+		$(this).find('.plates__text').toggleClass('active');
+    });
+	
+	
     $(".plates__up-button").click(function(event){
         event.preventDefault();
-        $(this).next('.plates__more-info').slideDown(500);
+        $(this).next('.plates__more-info').slideDown(300);
 		$(this).addClass('active');
 		$(this).parent().find('.plates__down-button').addClass('active');
     });
