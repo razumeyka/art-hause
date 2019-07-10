@@ -30,7 +30,7 @@ $(document).ready(function(){
 		});
 	}
 	
-	if(window.innerWidth > 1366) {
+	if(window.innerWidth > 1365) {
 		setHeiHeight(); 
 	}
 
