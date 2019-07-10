@@ -218,23 +218,13 @@ $(document).ready(function(){
     $(".button_up").click(function(event){
         event.preventDefault();
         $(this).closest('.wrapper').find('.production-page__more-info').slideDown(500);
-		$(this).closest('.production-page__stage').find('.production-page__caption').addClass('active');
 		$(this).addClass('active');
-		var dest = $(this).attr('href'); 
-		if(dest !== undefined && dest !== '') { 
-			$('html').animate({ 
-				scrollTop: $(dest).offset().top 
-			}, 500 
-			);
-		}
-		return false;
     });
 	
     $(".button_down").click(function(event){
         event.preventDefault();
         $(this).closest('.production-page__more-info').slideUp(500);
 		$(this).closest('.production-page__more-info').closest('.wrapper').find('.button_up').removeClass('active');
-		$(this).closest('.production-page__stage').find('.production-page__caption').removeClass('active');
 		$(this).addClass('active');
     });
 	

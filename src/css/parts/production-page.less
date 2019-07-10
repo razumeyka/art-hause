@@ -22,44 +22,36 @@
 	margin: 55px 0 20px;
 }
 
-.production-page__caption .production-page__after-caption {
-	display: none;
+.production-page__big-caption {
+	height: 650px;
+	position: relative;
+	margin-top: 50px;
+	overflow: hidden;
+}
+
+.production-page__caption-content {
+    background: rgba(109,87,69,0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    display: flex;
+	flex-direction: column;
+	justify-content: center;
+    align-items: center;
+	font: 700 60px "Arsenal";
+	font-size: 65px;
+	color: rgb(255, 255, 255);
+	text-align: center;
+}
+
+.production-page__big-caption .production-page__after-caption {
 	font: 400 28px "Arsenal";
 	color: rgb(255, 255, 255);
 	text-align: center;
 	position: relative;
-}
-
-.production-page__caption div {
-	position: relative;
-}
-
-.production-page__caption.active {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	background: url(../../images/bg_figures.jpg) no-repeat center;
-	background-size: cover;
-	height: 500px;
-    font: 700 60px "Arsenal";
-	font-size: 65px;
-	color: rgb(255, 255, 255);
-	position: relative;
-}
-
-.production-page__caption.active:before {
-	content: "";
-	background: rgba(109,87,69,0.6);
-	position: absolute;
-	left: 0px;
-	top: 0;
-	width: 100%;
-	height: 100%;
-}
-
-.production-page__caption.active .production-page__after-caption {
-	display: block;
 }
 
 .production-page__small-caption {
@@ -238,6 +230,10 @@
 	
 	.documents-screen__document {
 		flex-direction: column;
+	}
+	
+	.production-page__big-caption {
+		height: 400px;
 	}
 }
 
