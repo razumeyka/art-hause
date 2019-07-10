@@ -34,11 +34,17 @@ $(document).ready(function(){
 		setHeiHeight(); 
 	}
 
-	$(window).resize(function(e){
-		if(window.innerWidth > 1366) {
+	$(window).resize(function(){
+		if(window.innerWidth > 1365) {
 			setHeiHeight();
+		} else {
+			$('.home .main-screen .video-background').css({
+				height: '0px'
+			});
 		}
 	});
+	$(window).resize();
+	
 	
 // 	carousel
 
