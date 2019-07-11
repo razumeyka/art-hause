@@ -266,6 +266,39 @@ $(document).ready(function(){
 	
 });	
 
+
+// popup-dialogues
+$(document).ready(function(){
+    $.fancybox.defaults.touch = false;
+    $('*[data-popupform]').click(function(e){
+        console.log('call popup form', $(this).data('src'));
+        $('#popup-form-src').html(
+            '<div class="header__content flex_between">' +
+                '<div class="header-small__left-part flex">' +
+                    '<div class="burger">' +
+                        '<span></span>' +
+                    '</div>' +
+                '</div>' +
+                '<div class="header__center-block">' +
+                    '<a href="/" class="logo logo_small"></a>' +
+                '</div>' +
+            '</div>' +
+            '<iframe class="form-iframe form-iframe_footer" src="' + $(this).data('src') + '" width="100%" height="450" align="center"></iframe>'
+        );
+        $.fancybox.open([
+            {
+                src  : '#popup-form-src',
+                type : 'inline',
+                opts : {
+                }
+            },
+        ], {
+            loop : false
+        });        
+    });
+});	
+
+
 // 	GoogleMap
 	
 var markerImage, marker;
