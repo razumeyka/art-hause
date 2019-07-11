@@ -30,12 +30,16 @@ $(document).ready(function(){
 		});
 	}
 	
-	if(window.innerWidth > 1365) {
+	if(window.innerWidth > 1366) {
 		setHeiHeight(); 
+	} else {
+		$('.home .main-screen .video-background').css({
+			height: '0px'
+		});
 	}
 
 	$(window).resize(function(){
-		if(window.innerWidth > 1365) {
+		if(window.innerWidth > 1366) {
 			setHeiHeight();
 		} else {
 			$('.home .main-screen .video-background').css({
