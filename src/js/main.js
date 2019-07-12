@@ -15,13 +15,6 @@ $(document).ready(function(){
 	
 	$(".menu-screen").stick_in_parent();
 	
-// languages
-	
-    $('.languages__item').click(function(e){ 
-		$('.languages__item').removeClass('languages__item_active');
-		$(this).toggleClass('languages__item_active'); 
-    });	
-	
 // main-screen height
 	
 	function setHeiHeight() {
