@@ -111,6 +111,7 @@
 	height: 330px;
 }
 
+
 .slider-nav {
 	margin-top: 15px;
 	height: auto;
@@ -119,10 +120,11 @@
 .slider-nav__item {
     justify-content: center;
     box-sizing: border-box;
-    padding: 0 10px;
+    padding: 0 35px;
 }
 
 .slider-nav__item img {
+	width: 100%;
 	height: 80px;
 	cursor: pointer;
 }
@@ -199,6 +201,15 @@
 	font: 400 20px "Circe";
 }
 
+.project-page__mobile-img {
+	display: none;
+	background: url(../../images/slide2.png) no-repeat center;
+	background-size: cover;
+	width: 100%;
+	height: 200px;
+	margin-bottom: 30px;
+}
+
 .project-page .img-text__img {
 	background: url(../../images/slide1.png) no-repeat center;
 	background-size: cover;
@@ -230,6 +241,7 @@
 
 .project-page__button {
     margin: 30px auto 0;
+    max-width: 260px;
 }
 
 
@@ -279,25 +291,33 @@
 }
 
 @media screen and (max-width: 767px) {
+	
+	.project-page .inner-page {
+		padding: 40px 0;
+	}
+	
 	.products-page__buttons {
 		flex-direction: column;
 		align-items: center;
+		margin: 0 0 10px;
 	}
 	
 	.products-page .plates__plate .plates__text {
 		position: static;
+    	padding: 20px 15px 40px;
 	}
 	
 	.products-page__buttons .button {
-		margin: 10px 0;
+		margin: 5px 0;
 	}
 	
     .products-page .plates__img, .projects-page .plates__img {
 		display: block;
+		 height: 225px;
 	}
 	
 	.products-page .plates__plate, .projects-page .plates__plate{
-		padding: 20px 0;
+		padding: 0;
 	}
 	
 	.projects-page .plates__description {
@@ -309,10 +329,22 @@
 		margin: 0 auto;
 	}
 	
+	.project-page__mobile-img {
+		display: block;
+	}
+	
+	.products-page .plates {
+		padding-bottom: 90px;
+	}
+	
 }
 
 @media screen and (max-width: 500px) {
 	.slider-for__item img {
+		height: 200px;
+	}
+	
+	.project-page .img-text__img {
 		height: 200px;
 	}
 }

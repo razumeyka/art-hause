@@ -13,8 +13,6 @@ $(document).ready(function(){
         $('.burger').toggleClass( 'burger_active' ); 
     });
 	
-	$(".menu-screen").stick_in_parent();
-	
 // main-screen height
 	
 	function setHeiHeight() {
@@ -210,7 +208,7 @@ $(document).ready(function(){
 		dots: false,
 		arrows: false,
 		autoplay: true,
-    	autoplaySpeed: 1000
+    	autoplaySpeed: 3000
 	});
 	
 	

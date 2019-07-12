@@ -2,6 +2,7 @@
     margin: 80px 0 50px;
 }
 
+
 .production-page__main-screen {
     height: 1080px;
     margin-bottom: 78px;
@@ -63,7 +64,7 @@
     font: 400 16px "Circe";
     line-height: 1.9;
     color: #363636;
-    margin: 30px 0;
+    margin: 15px 0;
 }
 	
 .img-text_reverse {
@@ -73,6 +74,12 @@
 .img-text__img {
 	width: 53%;
 	height: auto;
+}
+
+.img-text__img_noslider {
+    background: url(../../images/slide1.png) no-repeat center;
+    background-size: cover;
+    height: 260px;
 }
 
 .img-text {
@@ -87,10 +94,11 @@
 
 .button_up {
 	margin-top: 15px;
+	opacity: 1;
 }
 
 .button_up.active {
-	display: none;
+	opacity: 0;
 }
 
 .button_down {
