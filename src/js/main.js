@@ -268,51 +268,42 @@ $(document).ready(function(){
 
 
 // popup-dialogues
-$(document).ready(function(){
+var clickPopupForm = function(e){
     //$.fancybox.defaults.touch = false;
-    $('*[data-popupform]').click(function(e){
-        //console.log('call popup form', $(this).data('src'));
-        $('#popup-form-src').html(
-            '<div class="header__content flex_between">' +
-                '<div class="header-small__left-part flex">' +
-                    '<div class="burger">' +
-                        '<span></span>' +
-                    '</div>' +
-                '</div>' +
-                '<div class="header__center-block">' +
-                    '<a href="/" class="logo logo_small"></a>' +
-                '</div>' +
-            '</div>' +
-            '<iframe class="form-iframe form-iframe_footer" src="' + $(this).data('src') + '" width="100%" height="' + ($(this).data('height') || 550) + '" align="center" style="border:none; overflow:hidden;" scrolling="no" onload="AdjustIframeHeightOnLoad(this)"></iframe>'
-        );
-        $.fancybox.open([
-            {
-                src  : '#popup-form-src',
-                type : 'inline',
-                opts : {
-                    touch: false,
-                    afterShow : function( instance, current ) {
-                        var burger = $(current.$content).find('.burger');
-                        if('undefined' !== typeof burger) {
-                            //console.log('burger=', $(burger));
-                            $(burger).click( function() { 
-                                $('.menu-screen').slideToggle(300); 
-                                $('.burger').toggleClass( 'burger_active' ); 
-                            });
-                        }
-                    }
-                }
-            },
-        ], {
-            loop : false
-        });        
-    });
-});
-var AdjustIframeHeightOnLoad = function (t) {
+	$('#popup-form-src').html(
+		'<div class="header__content flex_between">' +
+			'<div class="header__center-block">' +
+				'<a href="/" class="logo logo_small"></a>' +
+			'</div>' +
+		'</div>' +
+		'<iframe class="form-iframe form-iframe_footer" src="' + $(this).data('src') + '" width="100%" height="' + ($(this).data('height') || 550) + '" align="center" style="border:none; overflow:hidden;" scrolling="no" onload="adjustIframeHeightOnLoad(this)"></iframe>'
+	);
+	$.fancybox.open([
+		{
+			src  : '#popup-form-src',
+			type : 'inline',
+			opts : {
+				touch: false,
+			}
+		},
+	], {
+		loop : false
+	});
+}
+var adjustIframeHeightOnLoad = function (t) {
     try {
         $(t).css('height', t.contentWindow.document.body.scrollHeight + 50 + "px");
     } catch (e){}
 }
+$(document).ready(function(){// начальная привязка кнопок
+    try{$('*[data-popupform]').unbind().click(clickPopupForm);}catch(e){}
+});
+$(window).resize(function(){// перепривязка кнопок в слайдерах - не придумал ни чего лучше, так как сам slick на таймауте работает
+    setTimeout(
+        "try{$('*[data-popupform]').unbind().click(clickPopupForm);}catch(e){}",
+        100
+    );
+});
 
 
 // 	GoogleMap
