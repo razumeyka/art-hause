@@ -12,7 +12,7 @@
     margin: 0 10px;
 }
 
-.products-page  .plates {
+.products-page .plates {
     padding-bottom: 260px;
 }
 
@@ -90,10 +90,7 @@
 }
 
 .product-page__photo__main-photo {
-	background: url(../../images/house1.jpg) no-repeat center;
-	background-size: cover;
 	width: 50%;
-	height: auto;
 }
 
 .product-page__product-slider {
@@ -210,12 +207,6 @@
 	margin-bottom: 30px;
 }
 
-.project-page .img-text__img {
-	background: url(../../images/slide1.png) no-repeat center;
-	background-size: cover;
-	height: 260px;
-}
-
 .img-text ul {
 	padding-left: 15px;
 }
@@ -274,7 +265,7 @@
 	
 	.product-page__photo__main-photo {
 		width: calc(100% + 30px);
-		height: 300px;
+		height: 400px;
 		max-width: 600px;
 		margin: 0 -15px 20px;
 	}
@@ -293,7 +284,7 @@
 @media screen and (max-width: 767px) {
 	
 	.project-page .inner-page {
-		padding: 40px 0;
+		padding: 40px 0 50px;
 	}
 	
 	.products-page__buttons {
@@ -313,11 +304,14 @@
 	
     .products-page .plates__img, .projects-page .plates__img {
 		display: block;
-		 height: 225px;
 	}
 	
 	.products-page .plates__plate, .projects-page .plates__plate{
 		padding: 0;
+	}
+	
+	.projects-page	.plates__plate {
+		margin-bottom: 20px;
 	}
 	
 	.projects-page .plates__description {
@@ -337,6 +331,10 @@
 		padding-bottom: 90px;
 	}
 	
+	.product-page__photo__main-photo {
+    height: auto;
+}
+	
 }
 
 @media screen and (max-width: 500px) {
@@ -344,7 +342,4 @@
 		height: 200px;
 	}
 	
-	.project-page .img-text__img {
-		height: 200px;
-	}
 }
