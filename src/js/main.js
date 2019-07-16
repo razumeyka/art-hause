@@ -218,6 +218,20 @@ $(document).ready(function(){
     	autoplaySpeed: 3000
 	});
 	
+// input[type="file"]
+
+	$('input[type="file"]').change(function(){
+		if($(this).val()==''){
+			$(this).next().html('');
+			return;
+			}
+		//console.log(.files);
+		var ar=[];
+		for (var i = 0; i < $(this)[0].files.length; i++) {
+			ar.push($(this)[0].files[i].name);
+		}
+		$(this).next().html(ar.join(', '));
+	});
 	
 	
 // hidden text
