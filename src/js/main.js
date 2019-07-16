@@ -9,8 +9,15 @@ $(document).ready(function(){
 // mobile_menu
     
     $('.burger').click( function() { 
-        $('.menu-screen').slideToggle(300); 
-        $('.burger').toggleClass( 'burger_active' ); 
+        $('.menu-screen').slideToggle(500); 
+		if ($('.burger').hasClass('burger_active')) {
+			setTimeout(function() {
+				$('.burger').removeClass( 'burger_active' );
+			}, 600);
+			return;
+		} else {
+			$('.burger').addClass('burger_active');
+		}
     });
 	
 // main-screen height
