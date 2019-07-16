@@ -222,7 +222,7 @@ $(document).ready(function(){
 
 	$('input[type="file"]').change(function(){
 		if($(this).val()==''){
-			$(this).next().html('');
+			$(this).next().find('.file__text').html('');
 			return;
 			}
 		//console.log(.files);
@@ -230,7 +230,7 @@ $(document).ready(function(){
 		for (var i = 0; i < $(this)[0].files.length; i++) {
 			ar.push($(this)[0].files[i].name);
 		}
-		$(this).next().html(ar.join(', '));
+		$(this).next().find('.file__text').html(ar.join(', '));
 	});
 	
 	
